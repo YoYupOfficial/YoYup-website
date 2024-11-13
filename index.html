@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoyup Animation Series</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffcccb, #ffd700);
+            animation: backgroundGradient 10s ease infinite;
+            color: #333;
+            overflow-x: hidden;
+            transition: background 1s ease;
+        }
+
+        /* Animated Gradient Background */
+        @keyframes backgroundGradient {
+            0% { background: linear-gradient(135deg, #ffcccb, #ffd700); }
+            50% { background: linear-gradient(135deg, #f0f8ff, #ffcccb); }
+            100% { background: linear-gradient(135deg, #ffcccb, #ffd700); }
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #ffcccb;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff4500;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: headerSlideIn 1s ease-out;
+        }
+
+        @keyframes headerSlideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Navigation Styling */
+        nav {
+            background: linear-gradient(45deg, #ff4500, #ffd700);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 3px solid #ff9900;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.5s ease;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.3em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcccb;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('hero-banner.jpg') no-repeat center center/cover;
+            color: #fff;
+            border-bottom: 5px solid #ff4500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section h2 {
+            font-size: 3em;
+            animation: textGlow 1.5s ease-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 20px #ffcccb, 0 0 30px #ff4500, 0 0 40px #ffcccb; }
+            100% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ff4500, 0 0 40px #ffd700; }
+        }
+
+        /* Container Styling */
+        .container {
+            padding: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            margin: 40px 0;
+        }
+
+        .character-profile, .episode-summary {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #fff, #ffcccb);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .character-profile:hover, .episode-summary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover effect on images */
+        .character-profile img {
+            max-width: 100%;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .character-profile img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Fancy Button Styling */
+        .button {
+            background: linear-gradient(45deg, #ff4500, #ffd700);
+            padding: 10px 20px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #ffd700, #ff4500);
+            transform: scale(1.1);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcccb;
+            margin-top: 40px;
+            border-top: 5px solid #ff4500;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Confetti Section */
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4500;
+            opacity: 0;
+            animation: confettiFall 2s ease-in-out infinite;
+        }
+
+        @keyframes confettiFall {
+            0% { transform: translateY(-50px) rotate(45deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
+        }
+
+        /* Particle Animation */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            background: url('https://cdn.pixabay.com/photo/2017/08/30/01/10/star-2695564_960_720.jpg') repeat center center;
+            opacity: 0.5;
+            animation: particlesMove 5s infinite linear;
+        }
+
+        @keyframes particlesMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 200px 200px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header>
+        <h1>Welcome to the World of Yoyup!</h1>
+        <p>Your go-to site for all things *Yoyup*.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#episodes">Episodes</a>
+        <a href="#characters">Characters</a>
+        <a href="#fun">Fun Features</a>
+        <a href="#about">About the Creator</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Discover *Yoyup* - Where Fun Meets Adventure!</h2>
+        <div class="image-placeholder">[Add Hero Banner Image Here]</div>
+    </section>
+
+    <div class="container">
+        <!-- Episodes Section -->
+        <section id="episodes">
+            <h2>Episode Guide</h2>
+            <div class="episode-summary">
+                <h3>Episode 1: The Beginning</h3>
+                <div class="image-placeholder">[Add Episode 1 Thumbnail Here]</div>
+                <p>Meet Zac, Russell, and Michael as they embark on their first adventure.</p>
+                <a href="https://scratch.mit.edu/projects/1085193425" class="button">Watch Now</a>
+            </div>
+            <div class="episode-summary">
+                <h3>Episode 2: New Challenges</h3>
+                <div class="image-placeholder">[Add Episode 2 Thumbnail Here]</div>
+                <p>The trio faces unexpected twists that test their friendship.</p>
+                <a href="episode2.html" class="button">Watch Now</a>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="characters">
+            <h2>Character Profiles</h2>
+            <div class="character-profile">
+                <h3>Zac</h3>
+                <div class="image-placeholder">[Add Zac's Image Here]</div>
+                <p>The fearless leader with a heart of gold.</p>
+                <a href="zac.html" class="button">Learn More About Zac</a>
+            </div>
+            <div class="character-profile">
+                <h3>Russell</h3>
+                <div class="image-placeholder">[Add Russell's Image Here]</div>
+                <p>The strategist of the team with a sharp mind.</p>
+                <a href="russell.html" class="button">Learn More About Russell</a>
+            </div>
+            <div class="character-profile">
+                <h3>Michael</h3>
+                <div class="image-placeholder">[Add Michael's Image Here]</div>
+                <p>The comic relief who always keeps the group laughing.</p>
+                <a href="michael.html" class="button">Learn More About Michael</a>
+            </div>
+        </section>
+
+        <!-- Fun Features -->
+        <section id="fun">
+            <h2>Fun Features</h2>
+            <p>Take our quiz: <a href="quiz.html" class="button">Which *Yoyup* Character Are You?</a></p>
+            <p>Check out the fan art gallery: <a href="fanart.html" class="button">View Fan Art</a></p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About the Creator</h2>
+            <div class="image-placeholder">[Add Creator's Image or Logo Here]</div>
+            <p>Learn about how *Yoyup* started and the inspiration behind it.</p>
+            <p>The creator shares their journey and future plans for the series.</p>
+        </section>
+    </div>
+
+    <!-- Confetti Animation -->
+    <div id="confetti" class="confetti"></div>
+    <div class="particles"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Yoyup Animation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
