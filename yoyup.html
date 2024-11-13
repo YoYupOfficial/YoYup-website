@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoyup Animation Series</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: backgroundFlash 3s infinite;
+        }
+        @keyframes backgroundFlash {
+            0% { background-color: #f0f8ff; }
+            50% { background-color: #ffebcd; }
+            100% { background-color: #f0f8ff; }
+        }
+        header {
+            background-color: #ffcccb;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff4500;
+        }
+        nav {
+            background-color: #ffd700;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 3px solid #ffa500;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 50px;
+            background: url('hero-banner.jpg') no-repeat center center/cover;
+            color: #fff;
+            border-bottom: 5px solid #ff4500;
+        }
+        .container {
+            padding: 20px;
+        }
+        .character-profile, .episode-summary {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .character-profile:hover, .episode-summary:hover {
+            transform: scale(1.05);
+        }
+        .image-placeholder {
+            text-align: center;
+            margin: 10px 0;
+            border: 2px dashed #aaa;
+            padding: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcccb;
+            margin-top: 20px;
+            border-top: 5px solid #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the World of Yoyup!</h1>
+        <p>Your go-to site for all things *Yoyup*.</p>
+    </header>
+
+    <nav>
+        <a href="#episodes">Episodes</a>
+        <a href="#characters">Characters</a>
+        <a href="#fun">Fun Features</a>
+        <a href="#about">About the Creator</a>
+    </nav>
+
+    <section class="hero-section">
+        <h2>Discover *Yoyup* - Where Fun Meets Adventure!</h2>
+        <div class="image-placeholder">[Add Hero Banner Image Here]</div>
+    </section>
+
+    <div class="container">
+        <section id="episodes">
+            <h2>Episode Guide</h2>
+            <div class="episode-summary">
+                <h3>Episode 1: The Beginning</h3>
+                <div class="image-placeholder">[Add Episode 1 Thumbnail Here]</div>
+                <p>Meet Zac, Russell, and Michael as they embark on their first adventure.</p>
+                <a href="episode1.html">Watch Now</a>
+            </div>
+            <div class="episode-summary">
+                <h3>Episode 2: New Challenges</h3>
+                <div class="image-placeholder">[Add Episode 2 Thumbnail Here]</div>
+                <p>The trio faces unexpected twists that test their friendship.</p>
+                <a href="episode2.html">Watch Now</a>
+            </div>
+        </section>
+
+        <section id="characters">
+            <h2>Character Profiles</h2>
+            <div class="character-profile">
+                <h3>Zac</h3>
+                <div class="image placeholder">[<img src="zac.jpg" alt="zac"  width="600">]</div>
+                <p>The fearless leader with a heart of gold.</p>
+                <a href="zac.html">Learn More About Zac</a>
+            </div>
+            <div class="character-profile">
+                <h3>Russell</h3>
+                <div class="image-placeholder">[Add Russell's Image Here]</div>
+                <p>The strategist of the team with a sharp mind.</p>
+                <a href="russell.html">Learn More About Russell</a>
+            </div>
+            <div class="character-profile">
+                <h3>Michael</h3>
+                <div class="image-placeholder">[Add Michael's Image Here]</div>
+                <p>The comic relief who always keeps the group laughing.</p>
+                <a href="michael.html">Learn More About Michael</a>
+            </div>
+        </section>
+
+        <section id="fun">
+            <h2>Fun Features</h2>
+            <p>Take our quiz: <a href="quiz.html">Which *Yoyup* Character Are You?</a></p>
+            <p>Check out the fan art gallery: <a href="fanart.html">View Fan Art</a></p>
+            <div class="image-placeholder">[Add Fan Art Preview Image Here]</div>
+        </section>
+
+        <section id="about">
+            <h2>About the Creator</h2>
+            <div class="image-placeholder">[Add Creator's Image or Logo Here]</div>
+            <p>Learn about how *Yoyup* started and the inspiration behind it.</p>
+            <p>The creator shares their journey and future plans for the series.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yoyup Animation. All rights reserved.</p>
+    </footer>
+</body>
+</html>
