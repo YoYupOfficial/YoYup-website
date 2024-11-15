@@ -12,24 +12,11 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            animation: gradientAnimation 20s ease-in-out infinite;
-        }
-
-        @keyframes gradientAnimation {
-            0% {
-                background: linear-gradient(to bottom right, #ff416c, #ff4b2b); /* Start with red tones */
-            }
-            25% {
-                background: linear-gradient(to bottom right, #6a11cb, #2575fc); /* Blueish tones */
-            }
-            50% {
-                background: linear-gradient(to bottom right, #ff4b2b, #ff6363); /* Soft pinkish tones */
-            }
-            75% {
-                background: linear-gradient(to bottom right, #a8c0ff, #3f2b96); /* Soft purple */
-            }
-            100% {
-                background: linear-gradient(to bottom right, #ff416c, #ff4b2b); /* Return to the original */
+           
+              background: linear-gradient(to bottom , #d9760d, #571dcc);
+  
+           
+               
             }
         }
 
@@ -212,14 +199,14 @@
             <input type="radio" name="q10" value="michael"> Small gatherings with close friends<br>
         </div>
 
-        <label>11. What do you value most in friendships?</label>
+        <label>11. How do you spend your free time?</label>
         <div class="answers">
-            <input type="radio" name="q11" value="zac"> Loyalty and shared experiences<br>
-            <input type="radio" name="q11" value="russell"> Fun and adventure<br>
-            <input type="radio" name="q11" value="michael"> Deep emotional connections<br>
+            <input type="radio" name="q11" value="zac"> Trying new activities and pushing myself<br>
+            <input type="radio" name="q11" value="russell"> Catching up with friends and exploring new places<br>
+            <input type="radio" name="q11" value="michael"> Reading or spending time on solo hobbies<br>
         </div>
 
-        <label>12. How do you approach problem-solving?</label>
+        <label>12. How do you prefer to solve problems?</label>
         <div class="answers">
             <input type="radio" name="q12" value="zac"> Taking action and figuring it out as I go<br>
             <input type="radio" name="q12" value="russell"> Working with others to brainstorm solutions<br>
@@ -327,7 +314,7 @@
             } else if (michaelCount > zacCount && michaelCount > russellCount) {
                 result = "You're Michael! You're thoughtful, introspective, and enjoy quiet moments.";
             } else {
-                result = "Youre wallywang!";
+                result = "You're a mix of Zac, Russell, and Michael!";
             }
 
             // Show result
@@ -337,4 +324,3 @@
     </script>
 </body>
 </html>
-
